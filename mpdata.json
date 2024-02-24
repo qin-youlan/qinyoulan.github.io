@@ -1,0 +1,16 @@
+{
+    "data":{
+    "images":["https://wx3.sinaimg.cn/orj360/008dIHoHly1hn17rmtx0nj30go0m90z0.jpg", "https://wx3.sinaimg.cn/orj360/008dIHoHly1hn17ro6t34j33k02o0qv7.jpg", "https://wx4.sinaimg.cn/orj360/008dIHoHly1hn17rodjebj32o03k0hdv.jpg","https://a1.qpic.cn/psc?/V52eDhPr4S8rRn38sP4r4JmEyb0OZN9b/bqQfVz5yrrGYSXMvKr.cqT2GrepwC9vhPHb2wQGSLtAorSb5sEiRvOiDzqBlD*783jiPc0UW27i6AkT*Gu.wGbbCx8C8YQFF.DSs..Dj*Xg!/b&ek=1&kp=1&pt=0&bo=oAU4BAAAAAADhzs!&tl=1&vuin=193401863&tm=1708646400&dis_t=1708648393&dis_k=ff78e89b17848fdee784670acb90cf51&sce=60-1-1&rf=viewer_4","https://m.qpic.cn/psc?/V52eDhPr4S8rRn38sP4r4JmEyb0OZN9b/bqQfVz5yrrGYSXMvKr.cqZ3e1lmyQ2Ta6VL2WdHZEmLen6fEeoLBATDxsCP80OdZus6I*QC.m6HmrNPZfMX2i0Qb0I2rS4q3kcMPCantd7o!/b&bo=6AQ4BAAAAAABF.A!&rf=viewer_4","https://m.qpic.cn/psc?/V52eDhPr4S8rRn38sP4r4JmEyb0OZN9b/bqQfVz5yrrGYSXMvKr.cqeoAHwq5Xv1*b4J7Ds49pVKWARGQ9QiVbwGfMsi8RLYka*wSO4RM02.NgX8isLC9uXvJHG1ULfnbwI11TEvWL5Q!/b&bo=lQNUAgAAAAADR6I!&rf=viewer_4","https://m.qpic.cn/psc?/V52eDhPr4S8rRn38sP4r4JmEyb0OZN9b/bqQfVz5yrrGYSXMvKr.cqVG45TaDceGlMijBlW743Tq0iP2t6FrDd8zXuNRehVx0*nYEE8jyh*Rvadqw46DGehFqMePxGCGE*n*2C7LUukg!/b&bo=EwRbAgAAAAADVzw!&rf=viewer_4","https://m.qpic.cn/psc?/V52eDhPr4S8rRn38sP4r4JmEyb0OZN9b/bqQfVz5yrrGYSXMvKr.cqfuyYojQkVkOoXTzKxPfN2rzNj5Z9SLHfY8B2RlUQFCPx.wJ2IYs0kFAJRIEUzk2ldqUbWYFEQYCp3K4W.CFHOU!/b&bo=VgEPAQAAAAADF2s!&rf=viewer_4","https://m.qpic.cn/psc?/V52eDhPr4S8rRn38sP4r4JmEyb0OZN9b/bqQfVz5yrrGYSXMvKr.cqbBKJlhEHuLpkSQCtDeZCS*3Mb7ddECHOvZk42Tf0MLj0jOEgKTMd1Y2ZqK5eI8XHG.D0NRG0P*pW2l6PbzVNeA!/b&bo=oAU4BAAAAAADhzs!&rf=viewer_4"],
+    "regions":{
+        "0":[{"x": 160,"y": 80,"width": 40,"height": 30,"description": "吊钩闭锁机构损坏，违反规程16.1.3机具的各种监测仪表以及制动器、限位器、安全阀、闭锁机构等安全装置应完好。"}],
+        "1":[{"x": 120, "y": 130, "width": 40, "height": 60, "description": "人在梯子上时无人扶梯，违反规程19.4.4"}],
+        "2":[{"x": 0, "y": 90, "width": 100, "height": 145, "description": "进入作业现场未穿工作服"}],
+        "3":[{"x": 0, "y": 130, "width": 280, "height": 65, "description":"临近道路作业未设置围栏"}],
+        "4":[{"x": 85, "y": 70, "width":15, "height": 20, "description": "滑轮闭锁机构损坏，违反规程16.1.3机具的各种监测仪表以及制动器、限位器、安全阀、闭锁机构等安全装置应完好。"}],
+        "5":[{"x": 60, "y": 60, "width": 140, "height": 35, "description": "工器具未绑扎固定"}],
+        "6":[{"x": 70, "y": 170, "width": 20, "height": 35, "description": "作业人员未佩戴安全帽"}],
+        "7":[{"x": 215, "y": 205, "width": 30, "height": 20, "description": "杆上作业人员向下抛物"}],
+        "8":[{"x": 190, "y": 120, "width": 15, "height": 15, "description": "作业人员未佩戴安全帽"},{"x": 30, "y": 130, "width": 150, "height": 100, "description": "临近道路作业未设置围栏"}]
+    }
+}
+}
