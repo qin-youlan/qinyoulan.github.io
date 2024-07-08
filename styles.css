@@ -19,6 +19,7 @@ header {
 }
 
 #logo {
+    display: inline-block; /* 使图片能够与文本在同一行显示 */
     width: auto; /* 保持图片宽高比 */
     height: 2.2em; /* 设置图片高度为 h1 的行高，1.5em 是示例值，根据实际情况调整 */
     margin-right: 10px; /* 与文字保持一定的间距 */
