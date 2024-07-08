@@ -10,15 +10,25 @@ body {
 }
 
 header {
+    display: flex;
+    align-items: center; /* 确保内容垂直居中 */
+    justify-content: space-between; /* 两端对齐，logo 和文本分别在左右两端 */
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
-    text-align: center;
+}
+
+#logo {
+    width: auto; /* 保持图片宽高比 */
+    height: 1.5em; /* 设置图片高度为 h1 的行高，1.5em 是示例值，根据实际情况调整 */
+    margin-right: 10px; /* 与文字保持一定的间距 */
+    vertical-align: middle; /* 垂直居中对齐图片 */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 1.5em;
+    margin: 0; /* 移除 h1 的默认外边距 */
+    font-size: 1.5em; /* 根据需要设置 h1 的字体大小 */
+    line-height: 1.5; /* 设置 h1 的行高，这个值应该与 #logo 的 height 相匹配 */
 }
 
 main {
