@@ -20,7 +20,7 @@ header {
 
 #logo {
     width: auto; /* 保持图片宽高比 */
-    height: 1.5em; /* 设置图片高度为 h1 的行高，1.5em 是示例值，根据实际情况调整 */
+    height: 2.2em; /* 设置图片高度为 h1 的行高，1.5em 是示例值，根据实际情况调整 */
     margin-right: 10px; /* 与文字保持一定的间距 */
     vertical-align: middle; /* 垂直居中对齐图片 */
 }
@@ -53,13 +53,13 @@ main {
 /* 磁贴样式 */
 .software-tile {
     position: relative;
-    width: calc(33.333% - 20px); /* 3列布局，减去间隔 */
+    width: calc(20% - 20px); /* 5列布局，减去间隔 */
     box-sizing: border-box;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     overflow: hidden; /* 确保覆盖层不超出磁贴边界 */
 }
 
