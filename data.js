@@ -10,7 +10,7 @@ export const softwareList = [
     {
         name: 'Adobe Photoshop',
         category: '图像编辑',
-        icon: 'icons/photoshop_icon.png',
+        icon: 'icons/photoshop_icon.svg',
         url: 'https://www.adobe.com/products/photoshop.html',
         recommendText: '设计师的终极工具。'
     },
