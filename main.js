@@ -1,38 +1,39 @@
 import { softwareList } from './data.js';
 
+// 其他代码...
+
 document.addEventListener('DOMContentLoaded', function() {
-    const recommendations = document.getElementById('recommendations');
+    // 其他初始化代码...
+    
+    const searchButton = document.getElementById('search-button');
+    const searchBox = document.getElementById('search-box');
+    const searchResults = document.getElementById('search-results');
 
-    // 创建一个映射，以分类名为键，用于存储每个分类的软件数组
-    const categoryMap = new Map();
+    searchButton.addEventListener('click', function() {
+        const keyword = searchBox.value.toLowerCase();
+        const filteredSoftwares = softwareList.filter(software =>
+            software.name.toLowerCase().includes(keyword) ||
+            software.category.toLowerCase().includes(keyword) ||
+            software.recommendText.toLowerCase().includes(keyword)
+        );
 
-    // 填充映射
-    softwareList.forEach(software => {
-        if (!categoryMap.has(software.category)) {
-            categoryMap.set(software.category, []);
-        }
-        categoryMap.get(software.category).push(software);
+        displaySearchResults(filteredSoftwares);
     });
 
-    // 根据分类创建HTML结构
-    categoryMap.forEach((softwares, category) => {
-        // 创建分类标题
-        const categoryTitle = document.createElement('h3');
-        categoryTitle.textContent = category;
-        recommendations.appendChild(categoryTitle);
-
-        // 创建列表
-        const categoryList = document.createElement('ul');
+    function displaySearchResults(softwares) {
+        searchResults.innerHTML = ''; // 清空之前的结果
+        if (softwares.length === 0) {
+            searchResults.innerHTML = '<p>没有找到相关结果。</p>';
+            return;
+        }
         softwares.forEach(software => {
-            const listItem = document.createElement('li');
-            listItem.className = 'software-tile';
-            listItem.innerHTML = `
-                <img src="${software.icon}" alt="${software.name}">
-                <h3>${software.name}</h3>
+            const resultItem = document.createElement('div');
+            resultItem.className = 'search-result';
+            resultItem.innerHTML = `
+                <h3>${software.name} - ${software.category}</h3>
                 <p>${software.recommendText}</p>
             `;
-            categoryList.appendChild(listItem);
+            searchResults.appendChild(resultItem);
         });
-        recommendations.appendChild(categoryList);
-    });
+    }
 });

@@ -50,7 +50,7 @@ main {
 #recommendations ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px;
+    margin: 10px;
 }
 
 #software-list {
@@ -69,7 +69,7 @@ main {
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 155, 55, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     overflow: hidden; /* 确保覆盖层不超出磁贴边界 */
 }
@@ -126,4 +126,24 @@ main {
     .software-tile {
         width: 100%; /* 移动设备上全宽 */
     }
+}
+#search-container {
+    margin-bottom: 20px;
+}
+
+#search-box {
+    padding: 10px;
+    width: 80%;
+    margin-right: 5px;
+}
+
+#search-button {
+    padding: 10px;
+}
+
+#search-results .search-result {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
