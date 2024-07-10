@@ -12,19 +12,19 @@
 <body>
     <header>
         <img src="icons/lan.png" alt="秦又懒" id="logo">
-        <h1>欢迎来到懒得推荐</h1>
+        <div id="search-container">
+        <input type="text" id="search-box" placeholder="搜索...">
+        <button id="search-button">搜索</button>
+    </div>
     </header>
     <main>
 <section id="recommendations">
     <h2>软件推荐</h2>
-    <div id="search-container">
-        <input type="text" id="search-box" placeholder="搜索软件...">
-        <button id="search-button">搜索</button>
-    </div>
     <div id="search-results"></div>
     <!-- 分类容器将在此处动态生成 -->
 </section>
     </main>
+    <script type="module" src="data.js"></script>
     <script type="module" src="main.js"></script>
 </body>
 </html>
