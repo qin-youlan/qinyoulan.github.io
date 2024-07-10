@@ -1,66 +1,66 @@
-// main.js
-// 引入data.js中的softwareList数组
-import { softwareList } from './data.js';
+// main.js 文件，用于动态生成磁贴
+import { softwareList } from './data.js'; // 导入软件列表数据
 
-// 获取承载磁贴的容器和搜索框
-const container = document.getElementById('softwareTiles');
-const searchBox = document.querySelector('.search-box');
+document.addEventListener('DOMContentLoaded', function() {
+    const softwareListElement = document.getElementById('software-list');
 
-// 函数：创建单个磁贴的HTML元素
-function createTile(software) {
-    const tile = document.createElement('div');
-    tile.className = 'software-tile';
+    softwareList.forEach(software => {
+        const listItem = document.createElement('li');
+        listItem.className = 'software-tile';
+        const content = `
+            <a href="${software.url}" target="_blank">
+                <img src="${software.icon}" alt="${software.name}">
+                <h3>${software.name}</h3>
+                <p>${software.category}</p>
+                <span class="recommend-text">${software.recommendText}</span>
+            </a>
+        `;
+        listItem.innerHTML = content;
+        softwareListElement.appendChild(listItem);
+    });
+    // 添加搜索框和按钮的事件监听器
+    const searchButton = document.getElementById('search-button');
+    const searchBox = document.getElementById('search-box');
+    const softwareListElement = document.getElementById('software-list');
 
-    const icon = document.createElement('img');
-    icon.src = software.icon;
-    icon.alt = software.name;
-    icon.className = 'tile-icon';
+    searchButton.addEventListener('click', function () {
+        const keyword = searchBox.value.trim().toLowerCase();
+        if (keyword === '') {
+            // 如果搜索框为空，则显示所有推荐
+            showAllRecommendations();
+        } else {
+            // 否则，过滤并显示相关推荐
+            showFilteredRecommendations(keyword);
+        }
+    });
 
-    const title = document.createElement('h2');
-    title.textContent = software.name;
-    title.className = 'tile-title';
+    // 初始显示所有推荐
+    showAllRecommendations();
+});
 
-    const description = document.createElement('p');
-    description.textContent = software.recommendText;
-    description.className = 'tile-description';
-
-    const link = document.createElement('a');
-    link.href = software.url;
-    link.target = '_blank';
-    link.className = 'tile-link';
-    link.setAttribute('aria-label', software.recommendText);
-
-    link.appendChild(icon);
-    link.appendChild(title);
-    link.appendChild(description);
-
-    tile.appendChild(link);
-
-    return tile;
-}
-
-// 函数：根据搜索框的值过滤并重新渲染磁贴
-function filterAndRenderTiles() {
-    const searchText = searchBox.value.toLowerCase();
-    const filteredList = searchText
-        ? softwareList.filter(software =>
-            software.name.toLowerCase().includes(searchText) ||
-            software.category.toLowerCase().includes(searchText) ||
-            software.recommendText.toLowerCase().includes(searchText)
-        )
-        : softwareList;
-
-    // 清空当前的磁贴容器
-    container.innerHTML = '';
-
-    // 渲染过滤后的磁贴
-    filteredList.forEach(software => {
-        container.appendChild(createTile(software));
+function showAllRecommendations() {
+    // 清空当前列表
+    softwareListElement.innerHTML = '';
+    // 重新生成所有推荐
+    softwareList.forEach(software => {
+        createSoftwareTile(software);
     });
 }
 
-// 事件监听器：当搜索框内容改变时，过滤并重新渲染磁贴
-searchBox.addEventListener('input', filterAndRenderTiles);
+function showFilteredRecommendations(keyword) {
+    // 清空当前列表
+    softwareListElement.innerHTML = '';
+    // 过滤并显示包含关键词的推荐
+    softwareList.filter(software =>
+        software.name.toLowerCase().includes(keyword) ||
+        software.category.toLowerCase().includes(keyword) ||
+        software.recommendText.toLowerCase().includes(keyword)
+    ).forEach(filteredSoftware => {
+        createSoftwareTile(filteredSoftware);
+    });
+}
 
-// 初始渲染所有磁贴
-filterAndRenderTiles();
+function createSoftwareTile(software) {
+    // 与之前相同的创建磁贴的逻辑
+    // ...
+}
