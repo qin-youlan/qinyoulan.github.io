@@ -104,7 +104,9 @@ main {
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding: 1em;
+    padding: 10px;
+    text-align: center;
+    overflow: auto;
 }
 
 .software-tile:hover .recommend-text {
