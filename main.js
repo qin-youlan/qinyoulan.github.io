@@ -1,45 +1,66 @@
+// main.js
 // 引入data.js中的softwareList数组
 import { softwareList } from './data.js';
 
-// 获取承载磁贴的容器
+// 获取承载磁贴的容器和搜索框
 const container = document.getElementById('softwareTiles');
+const searchBox = document.querySelector('.search-box');
 
-// 遍历softwareList数组，为每个软件生成一个磁贴
-softwareList.forEach(software => {
-    // 创建磁贴的容器元素
+// 函数：创建单个磁贴的HTML元素
+function createTile(software) {
     const tile = document.createElement('div');
-    tile.className = 'software-tile'; // 可以根据需要添加CSS类
+    tile.className = 'software-tile';
 
-    // 创建并设置磁贴中的icon
     const icon = document.createElement('img');
     icon.src = software.icon;
     icon.alt = software.name;
-    icon.className = 'tile-icon'; // 可以根据需要添加CSS类
+    icon.className = 'tile-icon';
 
-    // 创建磁贴的标题
     const title = document.createElement('h2');
     title.textContent = software.name;
-    title.className = 'tile-title'; // 可以根据需要添加CSS类
+    title.className = 'tile-title';
 
-    // 创建磁贴的描述文本
     const description = document.createElement('p');
     description.textContent = software.recommendText;
-    description.className = 'tile-description'; // 可以根据需要添加CSS类
+    description.className = 'tile-description';
 
-    // 创建磁贴的链接
     const link = document.createElement('a');
     link.href = software.url;
-    link.target = '_blank'; // 打开链接在新标签页
-    link.className = 'tile-link'; // 可以根据需要添加CSS类
+    link.target = '_blank';
+    link.className = 'tile-link';
+    link.setAttribute('aria-label', software.recommendText);
 
-    // 将icon、title、description添加到链接中
     link.appendChild(icon);
     link.appendChild(title);
     link.appendChild(description);
 
-    // 将链接添加到磁贴容器中
     tile.appendChild(link);
 
-    // 将磁贴添加到页面的容器中
-    container.appendChild(tile);
-});
+    return tile;
+}
+
+// 函数：根据搜索框的值过滤并重新渲染磁贴
+function filterAndRenderTiles() {
+    const searchText = searchBox.value.toLowerCase();
+    const filteredList = searchText
+        ? softwareList.filter(software =>
+            software.name.toLowerCase().includes(searchText) ||
+            software.category.toLowerCase().includes(searchText) ||
+            software.recommendText.toLowerCase().includes(searchText)
+        )
+        : softwareList;
+
+    // 清空当前的磁贴容器
+    container.innerHTML = '';
+
+    // 渲染过滤后的磁贴
+    filteredList.forEach(software => {
+        container.appendChild(createTile(software));
+    });
+}
+
+// 事件监听器：当搜索框内容改变时，过滤并重新渲染磁贴
+searchBox.addEventListener('input', filterAndRenderTiles);
+
+// 初始渲染所有磁贴
+filterAndRenderTiles();
