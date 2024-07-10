@@ -114,7 +114,7 @@ main {
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding: 2em;
+    margin: 2em;
 }
 
 .software-tile:hover .recommend-text {
