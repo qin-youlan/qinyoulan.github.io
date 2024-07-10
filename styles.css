@@ -98,13 +98,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 99, 71, 0.8); /* 推荐背景色，可自定义 */
+    background-color: rgba(255, 155, 55, 0.8); /* 推荐背景色，可自定义 */
     color: #fff;
     font-size: 1.25em;
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding: : 1em;
+    padding: 1em;
 }
 
 .software-tile:hover .recommend-text {
