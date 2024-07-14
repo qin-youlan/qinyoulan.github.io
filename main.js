@@ -7,12 +7,10 @@ function createSoftwareTile(software) {
     const listItem = document.createElement('li');
     listItem.className = 'software-tile';
     const content = `
-        <a href="${software.url}" target="_blank">
-            <img src="${software.icon}" alt="${software.name}">
-            <h3>${software.name}</h3>
-            <p>${software.category}</p>
-            <span class="recommend-text">${software.recommendText}</span>
-        </a>
+        <img src="${software.icon}" alt="${software.name} icon">
+        <h3>${software.name}</h3>
+        <p>${software.category}</p>
+        <p class="recommend-text">${software.recommendText}</p>
     `;
     listItem.innerHTML = content;
     return listItem; // 返回创建的磁贴元素
@@ -54,11 +52,11 @@ function showFilteredRecommendations(keyword) {
     softwareListElement.innerHTML = '';
     // 过滤软件列表并显示匹配的磁贴
     softwareList.forEach(software => {
-        if (
+        const isMatch =
             software.name.toLowerCase().includes(keyword) ||
             software.category.toLowerCase().includes(keyword) ||
-            software.recommendText.toLowerCase().includes(keyword)
-        ) {
+            software.recommendText.toLowerCase().includes(keyword);
+        if (isMatch) {
             const tile = createSoftwareTile(software);
             softwareListElement.appendChild(tile);
         }
