@@ -54,7 +54,7 @@ main {
 /* 磁贴样式 */
 .software-tile {
     position: relative;
-    width: calc(20% - 20px); /* 5列布局，减去间隔 */
+    width: calc(20% - 20px);
     box-sizing: border-box;
     padding: 20px;
     background-color: #fff;
@@ -64,29 +64,29 @@ main {
     overflow: hidden; /* 确保覆盖层不超出磁贴边界 */
 }
 
-.software-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    .software-tile:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-.software-tile img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
+    .software-tile img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
 
-.software-tile h3 {
-    margin: 0 0 5px;
-    font-size: 1.25em;
-}
+    .software-tile h3 {
+        margin: 0 0 5px;
+        font-size: 1.25em;
+    }
 
-.software-tile p {
-    margin: 0 0 10px;
-    font-size: 0.9em;
-    color: #666;
-}
+    .software-tile p {
+        margin: 0 0 10px;
+        font-size: 0.9em;
+        color: #666;
+    }
 
 /* 推荐文本样式 */
 .recommend-text {
@@ -104,7 +104,7 @@ main {
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding: : 1em;
+    padding: 1em;
 }
 
 .software-tile:hover .recommend-text {
