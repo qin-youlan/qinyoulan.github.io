@@ -1,8 +1,7 @@
-// main.js 文件，用于动态生成磁贴并添加搜索功能
-
+// main.js 文件，用于动态生成磁贴
 import { softwareList } from './data.js'; // 导入软件列表数据
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const softwareListElement = document.getElementById('software-list');
 
     softwareList.forEach(software => {
@@ -20,4 +19,3 @@ document.addEventListener('DOMContentLoaded', function () {
         softwareListElement.appendChild(listItem);
     });
 });
-

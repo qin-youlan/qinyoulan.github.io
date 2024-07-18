@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>懒得</title>
+    <title>秦又懒</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
     <header>
-        <img id="logo" src="icons\lan.png" alt="Logo">
-        <div id="search-container">
-            <input id="search-box" type="text" placeholder="请输入关键词...">
-            <button id="search-button">搜索</button>
-        </div>
+        <img src="icons/lan.png" alt="Logo" id="logo">
+        <h1>欢迎来到懒得推荐</h1>
     </header>
     <main>
-        <ul id="software-list"></ul>
+        <section id="recommendations">
+            <h2>为您推荐：</h2>
+            <ul id="software-list"></ul>
+        </section>
     </main>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
