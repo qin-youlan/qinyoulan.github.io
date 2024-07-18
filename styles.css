@@ -21,7 +21,7 @@ header {
 #logo {
     display: inline-block; /* 使图片能够与文本在同一行显示 */
     width: auto; /* 保持图片宽高比 */
-    height: 2.2em; /* 设置图片高度为 h1 的行高，1.5em 是示例值，根据实际情况调整 */
+    height: 2.2em; /* 设置图片高度为 h1 的行高 */
     margin-right: 10px; /* 与文字保持一定的间距 */
     vertical-align: middle; /* 垂直居中对齐图片 */
 }
@@ -29,7 +29,7 @@ header {
 header h1 {
     margin: 0; /* 移除 h1 的默认外边距 */
     font-size: 1.5em; /* 根据需要设置 h1 的字体大小 */
-    line-height: 1.5; /* 设置 h1 的行高，这个值应该与 #logo 的 height 相匹配 */
+    line-height: 1.5; /* 设置 h1 的行高 */
 }
 
 main {
@@ -98,7 +98,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 99, 71, 0.8); /* 推荐背景色，可自定义 */
+    background-color: rgba(255, 99, 71, 0.8); /* 推荐背景色 */
     color: #fff;
     font-size: 1.25em;
     font-weight: bold;
