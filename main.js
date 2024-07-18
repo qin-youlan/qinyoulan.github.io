@@ -6,12 +6,10 @@ function createSoftwareTile(software) {
     const listItem = document.createElement('li');
     listItem.className = 'software-tile';
     const content = `
-            <a href="${software.url}" target="_blank">
-                <img src="${software.icon}" alt="${software.name}">
-                <h3>${software.name}</h3>
-                <p>${software.category}</p>
-                <span class="recommend-text">${software.recommendText}</span>
-            </a>
+        <img src="${software.icon}" alt="${software.name} icon">
+        <h3>${software.name}</h3>
+        <p>${software.category}</p>
+        <p class="recommend-text">${software.recommendText}</p>
     `;
     listItem.innerHTML = content;
     return listItem;
