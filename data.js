@@ -1,10 +1,10 @@
 // data.js 文件，存储软件列表数据
 export const softwareList = [
     {
-        name: 'Visual Studio Code',
+        name: 'Visual Studio',
         category: '开发工具',
         icon: 'icons/vscode_icon.png',
-        url: 'https://code.visualstudio.com/',
+        url: 'https://visualstudio.microsoft.com/zh-hans/',
         recommendText: '高效编码，必备工具！'
     },
     {
